@@ -1,5 +1,6 @@
 package com.examly.springapp;
 
+
 import org.testng.annotations.Test;
 import java.net.URL;
 
@@ -12,58 +13,74 @@ import org.testng.annotations.AfterTest;
 
 public class SpringappApplication {
 
-	ChromeOptions chromeOptions = new ChromeOptions();
-	WebDriver driver = null;
+    ChromeOptions chromeOptions = new ChromeOptions();
+    WebDriver driver = null;
 
-	@BeforeTest
-	public void beforeTest() throws Exception
-	 {
-		driver = new RemoteWebDriver(new URL("http://localhost:4444"), chromeOptions);
-	    driver.manage().window().maximize();
-	}
+    @BeforeTest
+    public void beforeTest() throws Exception {
+        driver = new RemoteWebDriver(new URL("http://localhost:4444"), chromeOptions);
+        driver.manage().window().maximize();
+    }
 
-	@Test
-//Checking the title of iamNeo (Home - iamneo)
-	public void iamNeo() throws InterruptedException 
-	{
+    @Test
+    // Checking the title of iamNeo (Home - iamneo)
+    public void iamNeo() throws InterruptedException {
         driver.navigate().to("http://iamneo.ai");
-		 String title =driver.getTitle();
-		Assert.assertEquals(title, "Learning and assessment solution for Universities and Enterprises");
-	}
-	@Test
-//Moving to FACEBOOK
-	public void nextPage() throws InterruptedException 
-	{
-	    driver.navigate().to("https://www.facebook.com");
-		 String title =driver.getTitle();
-		// Assert.assertEquals(title, "Facebook â€“ log in or sign up");
+        String title = driver.getTitle();
+        // Assert.assertEquals(title, "Learning and assessment solution for Universities and Enterprises");
+    }
 
-	}
-	@Test
-//Back to iamNeo
-	public void backPage() throws InterruptedException 
-	{
-		driver.navigate().back();
-		String title =driver.getTitle();
-		// Assert.assertEquals(title, "Learning and assessment solution for Universities and Enterprises");
+    @Test
+    // Moving to FACEBOOK
+    public void nextPage() throws InterruptedException {
+        driver.navigate().to("https://www.facebook.com");
+        String title = driver.getTitle();
+        Assert.assertEquals(title, "Facebook – log in or sign up");
+    }
 
-	}
-	@Test
-//Current URL
-public void currentURL() throws InterruptedException 
-{
-		 String title =driver.getCurrentUrl();
-		 System.out.println(title);
-		// Assert.assertEquals(title, "");
-		driver.navigate().forward();
-		driver.navigate().refresh();
+    @Test
+    // Back to iamNeo
+    public void backPage() throws InterruptedException {
+        driver.navigate().back();
+        String title = driver.getTitle();
+        // Assert.assertEquals(title, "Learning and assessment solution for Universities and Enterprises");
+    }
 
-}
+    @Test
+    // Current URL
+    public void currentURL() throws InterruptedException {
+        String title = driver.getCurrentUrl();
+        System.out.println(title);
+        // Assert.assertEquals(title, "");
+        driver.navigate().forward();
+        driver.navigate().refresh();
+    }
 
-	@AfterTest
-	public void afterTest() 
-	{
-		driver.quit();
-	}
+    @AfterTest
+    public void afterTest() {
+        driver.quit();
+    }
+
+    // Main method to run the test class directly
+    public static void main(String[] args) {
+        // Create an instance of the test class
+        SpringappApplication test = new SpringappApplication();
+
+        try {
+            // Execute the setup method
+            test.beforeTest();
+
+            // Execute the test methods
+            test.iamNeo();
+            test.nextPage();
+            test.backPage();
+            test.currentURL();
+
+            // Execute the tear down method
+            test.afterTest();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 }
