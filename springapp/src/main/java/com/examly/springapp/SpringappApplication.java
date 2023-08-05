@@ -17,10 +17,9 @@ public class SpringappApplication{
 
     @BeforeTest
     public void beforeTest() throws Exception {
-        FirefoxOptions chromeOptions = new FirefoxOptions();
-        FirefoxOptions. // Maximize the window on startup
-        driver = new FirefoxDriver(chromeOptions);
-    }
+        driver=Firefox();
+        driver.maximize_window();
+        }
 
     @Test
     public void iamNeo() throws InterruptedException {
