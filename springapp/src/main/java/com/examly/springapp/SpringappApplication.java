@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.BeforeTest;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -15,8 +16,8 @@ public class SpringappApplication{
 
     @BeforeTest
     public void beforeTest() throws Exception {
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--start-maximized"); // Maximize the window on startup
+        FirefoxOptions chromeOptions = new FirefoxOptions();
+        FirefoxOptions.addPref // Maximize the window on startup
         driver = new ChromeDriver(chromeOptions);
     }
 
