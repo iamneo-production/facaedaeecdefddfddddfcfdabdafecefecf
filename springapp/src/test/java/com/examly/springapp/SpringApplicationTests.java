@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
-public class SpringappApplication{
+public class SpringApplicationTests{
 
     WebDriver driver = null;
 
