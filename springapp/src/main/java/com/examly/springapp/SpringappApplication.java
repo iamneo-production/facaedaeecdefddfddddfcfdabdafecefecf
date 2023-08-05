@@ -2,11 +2,15 @@ package com.examly.springapp;
 
 
 import org.testng.annotations.Test;
-import java.net.URL;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+// import java.net.URL;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+// import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -14,13 +18,15 @@ import org.testng.annotations.AfterTest;
 public class SpringappApplication {
 
     ChromeOptions chromeOptions = new ChromeOptions();
-    WebDriver driver = null;
+	WebDriver driver = null;
 
-    @BeforeTest
-    public void beforeTest() throws Exception {
-        driver = new RemoteWebDriver(new URL("http://localhost:4444"), chromeOptions);
-        driver.manage().window().maximize();
-    }
+	@BeforeTest
+	public void beforeTest() throws Exception
+	 {
+		driver = new RemoteWebDriver(new URL("http://localhost:8080"), chromeOptions);
+	    driver.manage().window().maximize();
+	}
+
 
     @Test
     // Checking the title of iamNeo (Home - iamneo)
