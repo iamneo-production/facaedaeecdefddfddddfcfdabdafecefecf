@@ -33,7 +33,7 @@ public class SpringApplicationTests {
 	{
         driver.navigate().to("http://iamneo.ai");
 		 String title =driver.getTitle();
-		// Assert.assertEquals(title, "Learning and assessment solution for Universities and Enterprises");
+		Assert.assertEquals(title, "Learning and assessment solution for Universities and Enterprises");
 	}
 	@Test
 //Moving to FACEBOOK
