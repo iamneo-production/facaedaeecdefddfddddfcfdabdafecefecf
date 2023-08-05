@@ -1,56 +1,85 @@
 package com.examly.springapp;
 
-import java.util.concurrent.TimeUnit;
+import org.testng.annotations.Test;
+import java.net.URL;
 
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 
 public class SpringappApplication {
 
-	// Creating an instance of Firefox Browser
-	FirefoxDriver driver;
-	String qatechhubUrl = "http://qatechhub.com";
-	String facebookUrl = "https://www.facebook.com";
+    ChromeOptions chromeOptions = new ChromeOptions();
+    WebDriver driver = null;
 
-	public void invokeBrowser() {
+    @BeforeTest
+    public void beforeTest() throws Exception {
+        driver = new RemoteWebDriver(new URL("http://localhost:8080"), chromeOptions);
+        driver.manage().window().maximize();
+    }
 
-		System.setProperty("webdriver.gecko.driver",
-				"C:\\Users\\Saurabh Dhingra\\workspace\\libs\\geckodriver-v0.20.1-win64\\geckodriver.exe");
-		driver = new FirefoxDriver();
+    @Test
+    // Checking the title of iamNeo (Home - iamneo)
+    public void iamNeo() throws InterruptedException {
+        driver.navigate().to("http://iamneo.ai");
+        String title = driver.getTitle();
+        // Assert.assertEquals(title, "Learning and assessment solution for Universities and Enterprises");
+    }
 
-		driver.manage().window().maximize();
+    @Test
+    // Moving to FACEBOOK
+    public void nextPage() throws InterruptedException {
+        driver.navigate().to("https://www.facebook.com");
+        String title = driver.getTitle();
+        // Assert.assertEquals(title, "Facebook – log in or sign up");
+    }
 
-		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+    @Test
+    // Back to iamNeo
+    public void backPage() throws InterruptedException {
+        driver.navigate().back();
+        String title = driver.getTitle();
+        // Assert.assertEquals(title, "Learning and assessment solution for Universities and Enterprises");
+    }
 
-		driver.get(qatechhubUrl);
+    @Test
+    // Current URL
+    public void currentURL() throws InterruptedException {
+        String title = driver.getCurrentUrl();
+        System.out.println(title);
+        // Assert.assertEquals(title, "");
+        driver.navigate().forward();
+        driver.navigate().refresh();
+    }
 
-		String titleOfThePage = driver.getTitle();
+    @AfterTest
+    public void afterTest() {
+        driver.quit();
+    }
 
-		if (titleOfThePage.equals("QA Automation Tools Trainings and Tutorials | QA Tech Hub")) {
-			System.out.println("Test case PASS");
-		} else {
-			System.out.println("Test case FAIL");
-		}
+    // Main method to run the test class directly
+    public static void main(String[] args) {
+        // Create an instance of the test class
+        SpringappApplication test = new SpringappApplication();
 
-	}
+        try {
+            // Execute the setup method
+            test.beforeTest();
 
-	public void navigateCommands() {
-		driver.navigate().to(facebookUrl);
+            // Execute the test methods
+            test.iamNeo();
+            test.nextPage();
+            test.backPage();
+            test.currentURL();
 
-		String currentUrl = driver.getCurrentUrl();
-
-		System.out.println("Current URL :: " + currentUrl);
-		driver.navigate().back();
-
-		driver.navigate().refresh();
-
-		driver.navigate().refresh();
-	}
-
-	public static void main(String[] args) {
-		SpringappApplication assignment = new SpringappApplication();
-
-		assignment.invokeBrowser();
-
-	}
+            // Execute the tear down method
+            test.afterTest();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 }
