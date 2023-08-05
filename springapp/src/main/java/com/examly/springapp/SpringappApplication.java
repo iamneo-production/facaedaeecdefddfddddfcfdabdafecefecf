@@ -2,8 +2,9 @@ package com.examly.springapp;
 import org.testng.annotations.Test;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefoxOptions;
+//import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChrmeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.BeforeTest;
@@ -16,8 +17,9 @@ public class SpringappApplication{
 
     @BeforeTest
     public void beforeTest() throws Exception {
-        driver=Firefox();
-        driver.maximize_window();
+        FirefoxOptions firefoxOptions = new FirefoxOptions();
+        firefoxOptions.addArguments("--start-maximized"); // Maximize the window on startup
+        driver = new FirefoxDriver(firefoxOptions);
         }
 
     @Test
