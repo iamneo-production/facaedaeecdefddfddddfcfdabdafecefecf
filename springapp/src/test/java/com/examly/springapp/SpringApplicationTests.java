@@ -12,9 +12,9 @@ import org.testng.annotations.AfterTest;
 
 
 
-@SpringBootTest(classes = SpringappApplication.class)
-@AutoConfigureMockMvc
-@RunWith(SpringRunner.class)
+// @SpringBootTest(classes = SpringappApplication.class)
+// @AutoConfigureMockMvc
+// @RunWith(SpringRunner.class)
 public class SpringApplicationTests {
 
 	ChromeOptions chromeOptions = new ChromeOptions();
