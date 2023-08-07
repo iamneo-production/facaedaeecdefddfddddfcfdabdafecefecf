@@ -18,7 +18,7 @@ public class SpringApplicationTests {
 	@BeforeTest
 	public void beforeTest() throws Exception
 	 {
-		driver = new RemoteWebDriver(new URL("https://ide-facaedaeecdefddfddddfcfdabdafecefecf.project.examly.io/proxy/43771/"), chromeOptions);
+		driver = new RemoteWebDriver(new URL("http://localhost:8080"), chromeOptions);
 	    driver.manage().window().maximize();
 	}
 
