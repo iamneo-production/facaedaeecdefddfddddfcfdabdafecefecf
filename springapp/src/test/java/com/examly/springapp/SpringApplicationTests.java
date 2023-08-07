@@ -18,7 +18,7 @@ public class SpringApplicationTests {
 	@BeforeTest
 	public void beforeTest() throws Exception
 	 {
-		driver = new RemoteWebDriver(new URL("http://localhost:8080"), chromeOptions);
+		driver = new RemoteWebDriver(new URL("http://localhost:4444"), chromeOptions);
 	    driver.manage().window().maximize();
 	}
 

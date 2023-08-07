@@ -39,7 +39,7 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
@@ -68,7 +68,7 @@
         <dependency>
            <groupId>org.mockito</groupId>
            <artifactId>mockito-core</artifactId>
-        </dependency>
+        </dependency> -->
 	</dependencies>
 
 	<build>
