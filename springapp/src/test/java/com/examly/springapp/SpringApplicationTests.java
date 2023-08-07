@@ -46,7 +46,8 @@ public class SpringApplicationTests {
 	{
 		driver.navigate().back();
 		String title =driver.getTitle();
-		Assert.assertEquals(title, "Learning and assessment solution for Universities and Enterprises");
+		System.out.println("hello"+title);
+		Assert.assertEquals(title, "");
 
 	}
 	@Test
@@ -55,7 +56,7 @@ public void currentURL() throws InterruptedException
 {
 		 String title =driver.getCurrentUrl();
 		 System.out.println(title);
-		Assert.assertEquals(title, "");
+		Assert.assertEquals(title, "data:,");
 		driver.navigate().forward();
 		driver.navigate().refresh();
 

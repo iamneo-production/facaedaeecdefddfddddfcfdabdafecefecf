@@ -1,131 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-07T07:51:21 UTC" name="Surefire suite" finished-at="2023-08-07T07:51:27 UTC" duration-ms="5449">
+  <suite started-at="2023-08-07T08:02:45 UTC" name="Surefire suite" finished-at="2023-08-07T08:02:51 UTC" duration-ms="5301">
     <groups>
     </groups>
-    <test started-at="2023-08-07T07:51:21 UTC" name="Surefire test" finished-at="2023-08-07T07:51:27 UTC" duration-ms="5449">
+    <test started-at="2023-08-07T08:02:45 UTC" name="Surefire test" finished-at="2023-08-07T08:02:51 UTC" duration-ms="5301">
       <class name="com.examly.springapp.SpringApplicationTests">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.examly.springapp.SpringApplicationTests@31d7b7bf]" started-at="2023-08-07T07:51:21 UTC" name="beforeTest" finished-at="2023-08-07T07:51:23 UTC" duration-ms="1456" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.examly.springapp.SpringApplicationTests@31d7b7bf]" started-at="2023-08-07T08:02:45 UTC" name="beforeTest" finished-at="2023-08-07T08:02:47 UTC" duration-ms="1569" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="backPage()[pri:0, instance:com.examly.springapp.SpringApplicationTests@31d7b7bf]" started-at="2023-08-07T07:51:23 UTC" name="backPage" finished-at="2023-08-07T07:51:23 UTC" duration-ms="99" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Learning and assessment solution for Universities and Enterprises] but found []]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Learning and assessment solution for Universities and Enterprises] but found []
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1577)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
-at com.examly.springapp.SpringApplicationTests.backPage(SpringApplicationTests.java:49)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
-at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="backPage()[pri:0, instance:com.examly.springapp.SpringApplicationTests@31d7b7bf]" started-at="2023-08-07T08:02:47 UTC" name="backPage" finished-at="2023-08-07T08:02:47 UTC" duration-ms="80" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backPage -->
-        <test-method signature="currentURL()[pri:0, instance:com.examly.springapp.SpringApplicationTests@31d7b7bf]" started-at="2023-08-07T07:51:23 UTC" name="currentURL" finished-at="2023-08-07T07:51:23 UTC" duration-ms="38" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [] but found [data:,]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [] but found [data:,]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1577)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
-at com.examly.springapp.SpringApplicationTests.currentURL(SpringApplicationTests.java:58)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
-at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="currentURL()[pri:0, instance:com.examly.springapp.SpringApplicationTests@31d7b7bf]" started-at="2023-08-07T08:02:47 UTC" name="currentURL" finished-at="2023-08-07T08:02:47 UTC" duration-ms="119" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- currentURL -->
-        <test-method signature="iamNeo()[pri:0, instance:com.examly.springapp.SpringApplicationTests@31d7b7bf]" started-at="2023-08-07T07:51:23 UTC" name="iamNeo" finished-at="2023-08-07T07:51:26 UTC" duration-ms="3050" status="PASS">
+        <test-method signature="iamNeo()[pri:0, instance:com.examly.springapp.SpringApplicationTests@31d7b7bf]" started-at="2023-08-07T08:02:47 UTC" name="iamNeo" finished-at="2023-08-07T08:02:50 UTC" duration-ms="2869" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- iamNeo -->
-        <test-method signature="nextPage()[pri:0, instance:com.examly.springapp.SpringApplicationTests@31d7b7bf]" started-at="2023-08-07T07:51:26 UTC" name="nextPage" finished-at="2023-08-07T07:51:26 UTC" duration-ms="588" status="PASS">
+        <test-method signature="nextPage()[pri:0, instance:com.examly.springapp.SpringApplicationTests@31d7b7bf]" started-at="2023-08-07T08:02:50 UTC" name="nextPage" finished-at="2023-08-07T08:02:50 UTC" duration-ms="469" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- nextPage -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.examly.springapp.SpringApplicationTests@31d7b7bf]" started-at="2023-08-07T07:51:26 UTC" name="afterTest" finished-at="2023-08-07T07:51:27 UTC" duration-ms="129" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.examly.springapp.SpringApplicationTests@31d7b7bf]" started-at="2023-08-07T08:02:50 UTC" name="afterTest" finished-at="2023-08-07T08:02:51 UTC" duration-ms="110" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
