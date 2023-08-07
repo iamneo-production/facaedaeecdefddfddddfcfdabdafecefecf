@@ -8,6 +8,7 @@
           <include name="backPage"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
+          <include name="currentURL"/>
           <include name="iamNeo"/>
           <include name="nextPage"/>
         </methods>
