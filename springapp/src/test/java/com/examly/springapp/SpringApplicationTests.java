@@ -18,7 +18,7 @@ public class SpringApplicationTests {
 	@BeforeTest
 	public void beforeTest() throws Exception
 	 {
-		driver = new RemoteWebDriver(new URL("http://http://34.85.242.216:5001/"), chromeOptions);
+		driver = new RemoteWebDriver(new URL("http://34.85.242.216:4444/"), chromeOptions);
 	    driver.manage().window().maximize();
 	}
 
@@ -26,7 +26,7 @@ public class SpringApplicationTests {
 //Checking the title of iamNeo (Home - iamneo)
 	public void iamNeo() throws InterruptedException 
 	{
-        driver.navigate().to("http://iamneo.ai");
+        driver.navigate().to("https://iamneo.ai");
 		 String title =driver.getTitle();
 		Assert.assertEquals(title, "Learning and assessment solution for Universities and Enterprises");
 	}

@@ -5,8 +5,8 @@
     <classes>
       <class name="com.examly.springapp.SpringApplicationTests">
         <methods>
-          <include name="backPage"/>
           <include name="beforeTest"/>
+          <include name="backPage"/>
           <include name="afterTest"/>
           <include name="currentURL"/>
           <include name="iamNeo"/>

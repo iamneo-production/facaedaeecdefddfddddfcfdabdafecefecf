@@ -1,14 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: com.examly.springapp.SpringApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 1, Errors: 0, Skipped: 5, Time elapsed: 2.038 s <<< FAILURE! - in com.examly.springapp.SpringApplicationTests
-beforeTest(com.examly.springapp.SpringApplicationTests)  Time elapsed: 1.59 s  <<< FAILURE!
-org.openqa.selenium.remote.UnreachableBrowserException: 
-Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'facaedaeecdefddfddddfcfdabdafecefecf-0', ip: '10.56.122.3', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.162+', java.version: '11.0.18'
-Driver info: driver.version: RemoteWebDriver
-	at com.examly.springapp.SpringApplicationTests.beforeTest(SpringApplicationTests.java:21)
-Caused by: java.net.UnknownHostException: http: Name or service not known
-	at com.examly.springapp.SpringApplicationTests.beforeTest(SpringApplicationTests.java:21)
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 7.191 s <<< FAILURE! - in com.examly.springapp.SpringApplicationTests
+backPage(com.examly.springapp.SpringApplicationTests)  Time elapsed: 0.1 s  <<< FAILURE!
+java.lang.AssertionError: expected [Learning and assessment solution for Universities and Enterprises] but found []
+	at com.examly.springapp.SpringApplicationTests.backPage(SpringApplicationTests.java:48)
+
+currentURL(com.examly.springapp.SpringApplicationTests)  Time elapsed: 0.037 s  <<< FAILURE!
+java.lang.AssertionError: expected [] but found [data:,]
+	at com.examly.springapp.SpringApplicationTests.currentURL(SpringApplicationTests.java:57)
+
+iamNeo(com.examly.springapp.SpringApplicationTests)  Time elapsed: 3.829 s  <<< FAILURE!
+java.lang.AssertionError: expected [Learning and assessment solution for Universities and Enterprises] but found [Home - iamneo]
+	at com.examly.springapp.SpringApplicationTests.iamNeo(SpringApplicationTests.java:31)
+
+nextPage(com.examly.springapp.SpringApplicationTests)  Time elapsed: 0.507 s  <<< FAILURE!
+java.lang.AssertionError: expected [Facebook â€“ log in or sign up] but found [Facebook - log in or sign up]
+	at com.examly.springapp.SpringApplicationTests.nextPage(SpringApplicationTests.java:39)
 
