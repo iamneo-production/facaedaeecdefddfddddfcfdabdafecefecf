@@ -9,8 +9,6 @@
           <include name="backPage"/>
           <include name="afterTest"/>
           <include name="currentURL"/>
-          <include name="iamNeo"/>
-          <include name="nextPage"/>
         </methods>
       </class> <!-- com.examly.springapp.SpringApplicationTests -->
     </classes>

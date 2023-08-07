@@ -1,20 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: com.examly.springapp.SpringApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 7.191 s <<< FAILURE! - in com.examly.springapp.SpringApplicationTests
-backPage(com.examly.springapp.SpringApplicationTests)  Time elapsed: 0.1 s  <<< FAILURE!
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 6.808 s <<< FAILURE! - in com.examly.springapp.SpringApplicationTests
+backPage(com.examly.springapp.SpringApplicationTests)  Time elapsed: 0.113 s  <<< FAILURE!
 java.lang.AssertionError: expected [Learning and assessment solution for Universities and Enterprises] but found []
-	at com.examly.springapp.SpringApplicationTests.backPage(SpringApplicationTests.java:48)
+	at com.examly.springapp.SpringApplicationTests.backPage(SpringApplicationTests.java:49)
 
 currentURL(com.examly.springapp.SpringApplicationTests)  Time elapsed: 0.037 s  <<< FAILURE!
 java.lang.AssertionError: expected [] but found [data:,]
-	at com.examly.springapp.SpringApplicationTests.currentURL(SpringApplicationTests.java:57)
-
-iamNeo(com.examly.springapp.SpringApplicationTests)  Time elapsed: 3.829 s  <<< FAILURE!
-java.lang.AssertionError: expected [Learning and assessment solution for Universities and Enterprises] but found [Home - iamneo]
-	at com.examly.springapp.SpringApplicationTests.iamNeo(SpringApplicationTests.java:31)
-
-nextPage(com.examly.springapp.SpringApplicationTests)  Time elapsed: 0.507 s  <<< FAILURE!
-java.lang.AssertionError: expected [Facebook â€“ log in or sign up] but found [Facebook - log in or sign up]
-	at com.examly.springapp.SpringApplicationTests.nextPage(SpringApplicationTests.java:39)
+	at com.examly.springapp.SpringApplicationTests.currentURL(SpringApplicationTests.java:58)
 

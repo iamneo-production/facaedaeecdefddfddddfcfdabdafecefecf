@@ -28,7 +28,8 @@ public class SpringApplicationTests {
 	{
         driver.navigate().to("https://iamneo.ai");
 		 String title =driver.getTitle();
-		Assert.assertEquals(title, "Learning and assessment solution for Universities and Enterprises");
+		 System.out.println(title);
+		Assert.assertEquals(title, "Home - iamneo");
 	}
 	@Test
 //Moving to FACEBOOK
@@ -36,7 +37,7 @@ public class SpringApplicationTests {
 	{
 	    driver.navigate().to("https://www.facebook.com");
 		 String title =driver.getTitle();
-		Assert.assertEquals(title, "Facebook â€“ log in or sign up");
+		Assert.assertEquals(title, "Facebook - log in or sign up");
 
 	}
 	@Test
