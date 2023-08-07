@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: com.examly.springapp.SpringApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 15.366 s <<< FAILURE! - in com.examly.springapp.SpringApplicationTests
+backPage(com.examly.springapp.SpringApplicationTests)  Time elapsed: 0.114 s  <<< FAILURE!
+java.lang.AssertionError: expected [Learning and assessment solution for Universities and Enterprises] but found []
+	at com.examly.springapp.SpringApplicationTests.backPage(SpringApplicationTests.java:48)
+
+iamNeo(com.examly.springapp.SpringApplicationTests)  Time elapsed: 3.807 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+unknown error: session deleted because of page crash
+from unknown error: cannot determine loading status
+from tab crashed
+  (Session info: chrome=114.0.5735.133)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'facaedaeecdefddfddddfcfdabdafecefecf-0', ip: '10.56.122.3', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.162+', java.version: '11.0.18'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.133, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /tmp/.com.google.Chrome.JszArB}, goog:chromeOptions: {debuggerAddress: localhost:46051}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://10.56.122.3:4444/sessi..., se:cdpVersion: 114.0.5735.133, se:vnc: ws://10.56.122.3:4444/sessi..., se:vncEnabled: true, se:vncLocalAddress: ws://10.56.122.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0c0318d850420976158d367196390752
+	at com.examly.springapp.SpringApplicationTests.iamNeo(SpringApplicationTests.java:29)
+
+nextPage(com.examly.springapp.SpringApplicationTests)  Time elapsed: 0.09 s  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+invalid session id
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'facaedaeecdefddfddddfcfdabdafecefecf-0', ip: '10.56.122.3', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.162+', java.version: '11.0.18'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.133, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /tmp/.com.google.Chrome.JszArB}, goog:chromeOptions: {debuggerAddress: localhost:46051}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://10.56.122.3:4444/sessi..., se:cdpVersion: 114.0.5735.133, se:vnc: ws://10.56.122.3:4444/sessi..., se:vncEnabled: true, se:vncLocalAddress: ws://10.56.122.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0c0318d850420976158d367196390752
+	at com.examly.springapp.SpringApplicationTests.nextPage(SpringApplicationTests.java:37)
+
