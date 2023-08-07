@@ -54,7 +54,7 @@ public void currentURL() throws InterruptedException
 {
 		 String title =driver.getCurrentUrl();
 		 System.out.println(title);
-		// Assert.assertEquals(title, "");
+		Assert.assertEquals(title, "");
 		driver.navigate().forward();
 		driver.navigate().refresh();
 
