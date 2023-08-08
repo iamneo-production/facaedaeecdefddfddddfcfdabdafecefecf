@@ -33,7 +33,6 @@ public class SpringApplicationTests {
 	 			.accept(MediaType.APPLICATION_JSON))
 	        	.andExpect(status().isOk())
 	        	.andReturn();
-	 	
     }
 	
 	
