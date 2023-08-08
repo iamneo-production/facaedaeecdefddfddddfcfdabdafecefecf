@@ -35,7 +35,6 @@ public class SpringApplicationTests {
 	        	.andReturn();
     }
 	
-	
 	//Get All Task
 	@Test
     public void test_case2() throws Exception {
@@ -47,7 +46,6 @@ public class SpringApplicationTests {
 		        .andExpect(MockMvcResultMatchers.jsonPath("$[*].houseNo").exists())
 		        .andExpect(MockMvcResultMatchers.jsonPath("$").isNotEmpty())
 	        	.andReturn();
-	 	
     }
 	
 	//Get A Task By ID
